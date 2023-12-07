@@ -30,7 +30,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          cache-from: "racembenrhayem/${{ matrix.service.name }}:latest"
+          #cache-from: "racembenrhayem/${{ matrix.service.name }}:latest"
           file: ${{ matrix.service.folder }}/Dockerfile
           context: "{{defaultContext}}:services"
           push: true
