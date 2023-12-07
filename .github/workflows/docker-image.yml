@@ -31,8 +31,8 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           #cache-from: "racembenrhayem/${{ matrix.service.name }}:latest"
-          file: Dockerfile
-          context: "{{defaultContext}:backend"
+          file: ${{matrix.service.folder}}/Dockerfile
+          context: "{{defaultContext}}:backend"
           push: true
           tags: |
             racembenrhayem/${{ matrix.service.name }}:latest
