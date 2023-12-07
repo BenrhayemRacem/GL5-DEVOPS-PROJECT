@@ -18,6 +18,9 @@ jobs:
           - folder: frontend
             name: frontend
     steps:
+      - name: see what is ?
+        run: ls
+      
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
