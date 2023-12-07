@@ -31,7 +31,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           #cache-from: "racembenrhayem/${{ matrix.service.name }}:latest"
-          file: ${{ matrix.service.folder }}/Dockerfile
+          file: ./${{ matrix.service.folder }}/Dockerfile
           context: "{{defaultContext}}:${{ matrix.service.folder }}"
           push: true
           tags: |
