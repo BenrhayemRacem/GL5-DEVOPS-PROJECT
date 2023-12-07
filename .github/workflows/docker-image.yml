@@ -32,7 +32,7 @@ jobs:
         with:
           #cache-from: "racembenrhayem/${{ matrix.service.name }}:latest"
           file: ${{ matrix.service.folder }}/Dockerfile
-          context: "${{ matrix.service.folder }}"
+          context: "{{defaultContext}}:${{ matrix.service.folder }}"
           push: true
           tags: |
             racembenrhayem/${{ matrix.service.name }}:latest
